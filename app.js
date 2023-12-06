@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(response => response.json())
         .then(user => {
-            console.log("After fetch for updating profile, user:", user);
             displayUserProfile(user);
             registrationForm.reset();
             editProfileButton.style.display = "inline-block";
@@ -80,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function displayUserProfile(user) {
-        console.log("Displaying user profile:", user);
         profileInfo.innerHTML = `
             <li><strong>Full Name:</strong> ${user.full_name}</li>
             <li><strong>Age:</strong> ${user.age}</li>
